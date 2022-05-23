@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS users;
+
+-- DROP TABLE IF EXISTS film_company;
+
+DROP TABLE IF EXISTS films;
+
+DROP TABLE IF EXISTS subscriptions;

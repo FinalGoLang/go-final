@@ -1,0 +1,557 @@
+{
+	"info": {
+		"_postman_id": "e55e184d-270b-45c1-b2fb-93aeac46f6a2",
+		"name": "Go Final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Final",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "GetUserInfo",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTI2MDcxNzcuNTEwOTkxLCJ1c2VyIjp7InVzZXJfaWQiOjEsImZ1bGxfbmFtZSI6IlRlc3QgbmFtZSIsInBob25lIjoidGVzdCBwaG9uZSIsImVtYWlsIjoiaW1lcmVpMzJAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxZTg4ZjhjNjVmNzljODYwNzI2ZTJmNDA2YTU1NTIyN2U5NDE1ZGJiMmRhOGFlOGFkMmNiMmY1OTg3N2FlOGFkIiwidmVyaWZpZWQiOnRydWUsImhhc2giOiI1Y2I2MGEzM2NiMzY2NjQ5YWJjZTZjZDRkMTNjZjBiNTM0NWUxZmIwNzIzZWI1OGM0ODU0YzA0NmQyYzEzZTRkIiwidHlwZSI6ImNvbXBhbnkifX0.v55CLBTx-jM6TVCxh_hRaX48sSTbVh-nfSGOe89zM5c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTI2MDcxNzcuNTEwOTkxLCJ1c2VyIjp7InVzZXJfaWQiOjEsImZ1bGxfbmFtZSI6IlRlc3QgbmFtZSIsInBob25lIjoidGVzdCBwaG9uZSIsImVtYWlsIjoiaW1lcmVpMzJAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxZTg4ZjhjNjVmNzljODYwNzI2ZTJmNDA2YTU1NTIyN2U5NDE1ZGJiMmRhOGFlOGFkMmNiMmY1OTg3N2FlOGFkIiwidmVyaWZpZWQiOnRydWUsImhhc2giOiI1Y2I2MGEzM2NiMzY2NjQ5YWJjZTZjZDRkMTNjZjBiNTM0NWUxZmIwNzIzZWI1OGM0ODU0YzA0NmQyYzEzZTRkIiwidHlwZSI6ImNvbXBhbnkifX0.v55CLBTx-jM6TVCxh_hRaX48sSTbVh-nfSGOe89zM5c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"phone\":\"test 2 2 2\",\r\n    \"email\":\"test@gmail.com\",\r\n    \"full_name\":\"mark\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTI1NjIyOTQuNzYyMzc0LCJ1c2VyIjp7InVzZXJfaWQiOjEsImZ1bGxfbmFtZSI6IlRlc3QgbmFtZSIsInBob25lIjoidGVzdDUiLCJlbWFpbCI6IndvcmtAbWFpbC5jb20iLCJwYXNzd29yZCI6ImQ0OTNjYTM0MjVkZjI4YzQxNmFiMGI4ZjQyNTQ0NzMzYmFlNzY1YjA5N2Y3MzZlYzc5YTdhNDI0M2YyMDM1MTAiLCJoYXNoIjoiODQxZjRmOWYyYmUyNmQ1OTc1YmNjZmJhZmMyY2M0OTgzYWE4YjA4NGRmZTVkZWE4YWQ3NDI1NzUzMTU3Y2VjZSJ9fQ.8dIhc2Sl4fAtbL0KyyUePd3vbUQ2gIJulcnJaj3-8iY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/users/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Films",
+					"item": [
+						{
+							"name": "CreateFilm",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTI2MDg2MzkuNTEwODkyLCJ1c2VyIjp7InVzZXJfaWQiOjMsImZ1bGxfbmFtZSI6IlRlc3QgbmFtZSIsInBob25lIjoidGVzdCBwaG9uZSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImQ0OTNjYTM0MjVkZjI4YzQxNmFiMGI4ZjQyNTQ0NzMzYmFlNzY1YjA5N2Y3MzZlYzc5YTdhNDI0M2YyMDM1MTAiLCJoYXNoIjoiOWJmNDljYWQ4Njg1OTNhMTJhNWU1ZmJkYjk2N2FjNTAxZmNmNjUyMTgzNjUwNDZmODg0OTc5MzRkZDM4NTc1OCIsInR5cGUiOiJjb21wYW55In19.rw23MTkJ2gKZLN6qFdlWY390r7KVVapZDWEcE_6yCpY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"tmnt\",\r\n    \"price\":12.3,\r\n    \"rating\":5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/films",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"films"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllCompanyFilms",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTI2MDc4OTYuOTUzNzg0LCJ1c2VyIjp7InVzZXJfaWQiOjEsImZ1bGxfbmFtZSI6IlRlc3QgbmFtZSIsInBob25lIjoidGVzdCBwaG9uZSIsImVtYWlsIjoiaW1lcmVpNzc3QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiZDQ5M2NhMzQyNWRmMjhjNDE2YWIwYjhmNDI1NDQ3MzNiYWU3NjViMDk3ZjczNmVjNzlhN2E0MjQzZjIwMzUxMCIsImhhc2giOiIzZDA3MjA4MTVjODgwZDRiOWVmZWU5ZDkxMWY1N2VhMjQ3Yjc4MzFiM2E4ODk0NzIwNzAyNGI3YWFlODQzOTg0IiwidHlwZSI6InVzZXIifX0.mrvCh-OOnqGpBLEQr4399-mH5ygtOZxdBjPUaQBGfQI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/films",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"films"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update film",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTI2MDg2MzkuNTEwODkyLCJ1c2VyIjp7InVzZXJfaWQiOjMsImZ1bGxfbmFtZSI6IlRlc3QgbmFtZSIsInBob25lIjoidGVzdCBwaG9uZSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImQ0OTNjYTM0MjVkZjI4YzQxNmFiMGI4ZjQyNTQ0NzMzYmFlNzY1YjA5N2Y3MzZlYzc5YTdhNDI0M2YyMDM1MTAiLCJoYXNoIjoiOWJmNDljYWQ4Njg1OTNhMTJhNWU1ZmJkYjk2N2FjNTAxZmNmNjUyMTgzNjUwNDZmODg0OTc5MzRkZDM4NTc1OCIsInR5cGUiOiJjb21wYW55In19.rw23MTkJ2gKZLN6qFdlWY390r7KVVapZDWEcE_6yCpY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"film_id\": 2,\r\n    \"name\":\"test2\",\r\n    \"price\":1.25,\r\n    \"rating\":5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/films",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"films"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteFilm",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTI2MDg2MzkuNTEwODkyLCJ1c2VyIjp7InVzZXJfaWQiOjMsImZ1bGxfbmFtZSI6IlRlc3QgbmFtZSIsInBob25lIjoidGVzdCBwaG9uZSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImQ0OTNjYTM0MjVkZjI4YzQxNmFiMGI4ZjQyNTQ0NzMzYmFlNzY1YjA5N2Y3MzZlYzc5YTdhNDI0M2YyMDM1MTAiLCJoYXNoIjoiOWJmNDljYWQ4Njg1OTNhMTJhNWU1ZmJkYjk2N2FjNTAxZmNmNjUyMTgzNjUwNDZmODg0OTc5MzRkZDM4NTc1OCIsInR5cGUiOiJjb21wYW55In19.rw23MTkJ2gKZLN6qFdlWY390r7KVVapZDWEcE_6yCpY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"film_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/films",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"films"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Subscription",
+					"item": [
+						{
+							"name": "get my subscribes",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTI2MDk1NTUuODQ1NzA1LCJ1c2VyIjp7InVzZXJfaWQiOjQsImZ1bGxfbmFtZSI6IlRlc3QgbmFtZSIsInBob25lIjoidGVzdCBwaG9uZSIsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwicGFzc3dvcmQiOiJkNDkzY2EzNDI1ZGYyOGM0MTZhYjBiOGY0MjU0NDczM2JhZTc2NWIwOTdmNzM2ZWM3OWE3YTQyNDNmMjAzNTEwIiwiaGFzaCI6ImQ2ZTM4NGNiMWExOGVhYTg5NDJlN2E0ZDYyMDcwNTY1OWE4NzFhMzA3YzdhZDcxZTY3MDU2ODM5NWViNjlmY2MiLCJ0eXBlIjoidXNlciJ9fQ.wTjT6udQkTtf_TiejakfA_yvt1N-3zERC5ysxpGa0os",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/users/subscribe",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"subscribe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "subscribe to films",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTI2MDc4OTYuOTUzNzg0LCJ1c2VyIjp7InVzZXJfaWQiOjEsImZ1bGxfbmFtZSI6IlRlc3QgbmFtZSIsInBob25lIjoidGVzdCBwaG9uZSIsImVtYWlsIjoiaW1lcmVpNzc3QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiZDQ5M2NhMzQyNWRmMjhjNDE2YWIwYjhmNDI1NDQ3MzNiYWU3NjViMDk3ZjczNmVjNzlhN2E0MjQzZjIwMzUxMCIsImhhc2giOiIzZDA3MjA4MTVjODgwZDRiOWVmZWU5ZDkxMWY1N2VhMjQ3Yjc4MzFiM2E4ODk0NzIwNzAyNGI3YWFlODQzOTg0IiwidHlwZSI6InVzZXIifX0.mrvCh-OOnqGpBLEQr4399-mH5ygtOZxdBjPUaQBGfQI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"film_id\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/users/subscribe",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"subscribe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get expired subscriptions",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTI2MDk1NTUuODQ1NzA1LCJ1c2VyIjp7InVzZXJfaWQiOjQsImZ1bGxfbmFtZSI6IlRlc3QgbmFtZSIsInBob25lIjoidGVzdCBwaG9uZSIsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwicGFzc3dvcmQiOiJkNDkzY2EzNDI1ZGYyOGM0MTZhYjBiOGY0MjU0NDczM2JhZTc2NWIwOTdmNzM2ZWM3OWE3YTQyNDNmMjAzNTEwIiwiaGFzaCI6ImQ2ZTM4NGNiMWExOGVhYTg5NDJlN2E0ZDYyMDcwNTY1OWE4NzFhMzA3YzdhZDcxZTY3MDU2ODM5NWViNjlmY2MiLCJ0eXBlIjoidXNlciJ9fQ.wTjT6udQkTtf_TiejakfA_yvt1N-3zERC5ysxpGa0os",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/users/subscribe/expired",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"subscribe",
+										"expired"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\":\"Test name\",\r\n    \"phone\":\"test phone\",\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\":\"test\",\r\n    \"type\":\"company\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/sign-up",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\":\"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/sign-in",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/verify?email=test@gmail.com&hash=d50d5dda8398b0e37e2375ec32c4a080293fd062c3c1beb2e9a32a51ddde8bd1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"verify"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test@gmail.com"
+								},
+								{
+									"key": "hash",
+									"value": "d50d5dda8398b0e37e2375ec32c4a080293fd062c3c1beb2e9a32a51ddde8bd1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"old_password\":\"test\",\r\n    \"password\":\"newPass\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/reset-pwd",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"reset-pwd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all films",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/films",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"films"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Best films",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/best",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"best"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get film by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTI2MDg4MDYuMzYwNDIyOCwidXNlciI6eyJ1c2VyX2lkIjozLCJmdWxsX25hbWUiOiJUZXN0IG5hbWUiLCJwaG9uZSI6InRlc3QgcGhvbmUiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicGFzc3dvcmQiOiJkNDkzY2EzNDI1ZGYyOGM0MTZhYjBiOGY0MjU0NDczM2JhZTc2NWIwOTdmNzM2ZWM3OWE3YTQyNDNmMjAzNTEwIiwiaGFzaCI6IjliZjQ5Y2FkODY4NTkzYTEyYTVlNWZiZGI5NjdhYzUwMWZjZjY1MjE4MzY1MDQ2Zjg4NDk3OTM0ZGQzODU3NTgiLCJ0eXBlIjoiY29tcGFueSJ9fQ.HOtr6rZIpNRa08ItzDMY0lR3B3oDtvzGGjO1y6upbu4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"film_id\":4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/get",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

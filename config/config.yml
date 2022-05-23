@@ -1,0 +1,15 @@
+port: 8000
+
+app:
+  # db path in microservice
+  db_path: "postgres://user:mypassword@postgres:5432/testdb?sslmode=disable"
+  # db path in localhost
+  db_path_local: "postgres://user:mypassword@localhost:5432/testdb?sslmode=disable"
+  from: "purposee170@gmail.com"
+  emailUsername: "purposee170@gmail.com"
+  emailPassword: "bqfjhtuknpfphwef"
+
+auth:
+  hash_salt: "hash_salt"
+  signing_key: "signing_key"
+  token_ttl: 900 # 15 min
